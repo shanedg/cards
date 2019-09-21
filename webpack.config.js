@@ -63,6 +63,21 @@ module.exports = {
     ],
   },
 
+  resolve: {
+    extensions: [
+      // Using this overrides the default extensions!
+
+      // Defaults:
+      // '.wasm',
+      // '.mjs',
+      '.js',
+      // '.json',
+
+      // React:
+      '.jsx',
+    ],
+  },
+
   optimization: {
     splitChunks: {
       cacheGroups: {
