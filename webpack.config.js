@@ -13,7 +13,10 @@ module.exports = {
 
   plugins: [
     new webpack.ProgressPlugin(),
-    new HtmlWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      title: 'app',
+      template: './src/template/index.html',
+    }),
   ],
 
   module: {
@@ -48,6 +51,9 @@ module.exports = {
               {
                 modules: false,
               }
+            ],
+            [
+              '@babel/preset-react',
             ],
           ],
         },
