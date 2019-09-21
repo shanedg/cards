@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const title = 'app title';
+import App from './app/App.jsx';
 
 ReactDOM.render(
   React.createElement(
-    'h1',
+    App,
     null,
-    title,
   ),
   document.getElementById('root')
 );
+
+// TODO: check if mode is development
+module.hot.accept();

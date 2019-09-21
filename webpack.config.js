@@ -7,7 +7,8 @@ module.exports = {
   entry: './src/index.js',
 
   output: {
-    filename: '[name].[chunkhash].js',
+    // TODO: `chunkhash` instead of `hash` for non-HMR build
+    filename: '[name].[hash].js',
     path: path.resolve(__dirname, 'dist'),
   },
 
@@ -17,6 +18,7 @@ module.exports = {
       title: 'app',
       template: './src/template/index.html',
     }),
+    new webpack.HotModuleReplacementPlugin(),
   ],
 
   module: {
@@ -79,5 +81,7 @@ module.exports = {
 
   devServer: {
     open: true,
+    // TODO: check if mode is development
+    hot: true,
   },
 };
