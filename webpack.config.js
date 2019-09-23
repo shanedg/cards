@@ -23,7 +23,7 @@ module.exports = {
     rules: [
       {
         enforce: 'pre',
-        test: /.js$/,
+        test: /.(js|jsx)$/,
         include: [
           path.resolve(__dirname, 'src'),
         ],
@@ -34,7 +34,7 @@ module.exports = {
         },
       },
       {
-        test: /.js$/,
+        test: /.(js|jsx)$/,
         include: [
           path.resolve(__dirname, 'src'),
         ],
