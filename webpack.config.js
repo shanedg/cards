@@ -19,6 +19,18 @@ module.exports = {
   module: {
     rules: [
       {
+        enforce: 'pre',
+        test: /.js$/,
+        include: [
+          path.resolve(__dirname, 'src'),
+        ],
+        loader: 'eslint-loader',
+
+        options: {
+          cache: true, // ./node_modules/.cache
+        },
+      },
+      {
         test: /.js$/,
         include: [
           path.resolve(__dirname, 'src'),
