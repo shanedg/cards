@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const CleanWebpackPlugin = require('clean-webpack-plugin').CleanWebpackPlugin;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -13,6 +14,7 @@ module.exports = {
   },
 
   plugins: [
+    new CleanWebpackPlugin(),
     new webpack.ProgressPlugin(),
     new HtmlWebpackPlugin({
       title: 'app',
