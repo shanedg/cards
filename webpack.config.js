@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin').CleanWebpackPlugin;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = {
+module.exports = () => ({
   mode: 'development',
   entry: './src/index.js',
 
@@ -101,4 +101,4 @@ module.exports = {
     // TODO: check if mode is development
     hot: true,
   },
-};
+});
